@@ -9,6 +9,7 @@ import static org.fest.assertions.api.Assertions.assertThat;
 
 public class AddTest {
 
+    // e:3min a:10min
     @Test
     public void should_get_sum_of_evens() {
         //求leftBorder 和rightBorder之间的偶数和
@@ -31,6 +32,7 @@ public class AddTest {
 //        assertThat(add.getSumOfOdds(rightBorder, leftBorder)).isEqualTo(25);
 //    }
 
+    // e:3min a:2min
     @Test
     public void should_get_triple_and_add_two() {
         //求数组中每个元素的3倍加2的和
@@ -42,6 +44,7 @@ public class AddTest {
         assertThat(add.getSumTripleAndAddTwo(arrayList)).isEqualTo(390);
     }
 
+    // e:3min a:2min
     @Test
     public void should_get_triple_of_odd_and_add_two() {
         //求数组中奇数元素的3倍加2，偶数元素不变的数组
@@ -90,6 +93,7 @@ public class AddTest {
 //        assertThat(add.getMedianOfEven(arrayList)).isEqualTo((double) 3);
 //    }
 
+    // e:3min a:4min
     @Test
     public void should_return_average_of_even() {
         //求数组中所有偶数的平均数
@@ -115,6 +119,7 @@ public class AddTest {
 //        assertThat(add.isIncludedInEvenIndex(arrayList, unexistedElment)).isEqualTo(true);
 //    }
 
+    // 3min a:2min
     @Test
     public void should_return_unrepeated_elements_from_evens() {
         //找出数组中的所有偶数，从中剔除重复数据并返回
