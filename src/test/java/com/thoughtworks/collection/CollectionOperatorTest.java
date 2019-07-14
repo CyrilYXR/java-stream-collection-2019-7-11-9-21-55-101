@@ -9,6 +9,7 @@ import static org.fest.assertions.api.Assertions.assertThat;
 
 public class CollectionOperatorTest {
 
+    // e:10min a:10min
     @Test
     public void should_return_list_by_Interval() {
         //选出给定区间中所有的数字
@@ -27,6 +28,7 @@ public class CollectionOperatorTest {
         assertThat(collectionOperator.getListByInterval(right, left)).isEqualTo(inverseResultList);
     }
 
+    // e:5min a:2min
     @Test
     public void should_return_list_by__two_Intervals() {
         //选出给定区间中所有的偶数
@@ -44,6 +46,7 @@ public class CollectionOperatorTest {
         assertThat(collectionOperator.getEvenListByIntervals(right, left)).isEqualTo(inverseResultList);
     }
 
+    // e:5min a:10min
     @Test
     public void should_pop_even_elements() {
     //选出给定区间中所有的偶数
@@ -57,6 +60,7 @@ public class CollectionOperatorTest {
         assertThat(collectionOperator.popEvenElments(array)).isEqualTo(resultList);
     }
 
+    // e:5min a:1min
     @Test
     public void should_pop_last_element() {
         //弹出集合最后一个元素
