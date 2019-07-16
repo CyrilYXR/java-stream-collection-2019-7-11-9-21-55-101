@@ -4,6 +4,7 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class CollectionOperator {
@@ -31,21 +32,12 @@ public class CollectionOperator {
     }
 
     public List<Integer> popEvenElments(int[] array) {
-//        throw new NotImplementedException();
-        List<Integer> resultList = new ArrayList<>();
+        return Arrays.stream(array).boxed().filter(n -> n % 2 == 0).collect(Collectors.toList());
 
-//        return resultList.stream().filter(n -> n % 2 == 0).collect(Collectors.toList());
-        for(Integer n : array){
-            if(n % 2 == 0){
-                resultList.add(n);
-            }
-        }
-        return resultList;
     }
 
     public int popLastElment(int[] array) {
-//        throw new NotImplementedException();
-        return array[array.length - 1];
+        return Arrays.stream(array).skip(array.length - 1).findFirst().getAsInt();
     }
 
     public List<Integer> popCommonElement(int[] firstArray, int[] secondArray) {
